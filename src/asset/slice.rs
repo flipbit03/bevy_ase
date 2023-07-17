@@ -1,9 +1,9 @@
 //! Types for slice data.
 pub use asefile::{Slice9, SliceKey};
-use bevy::reflect::TypeUuid;
+use bevy::reflect::{TypePath, TypeUuid};
 
 /// A slice is a region of an Ase sprite with a name and optional user data.
-#[derive(Debug, TypeUuid)]
+#[derive(Debug, TypeUuid, TypePath)]
 #[uuid = "d12e0ddb-b47b-4d50-ae12-73eb970feae2"]
 pub struct Slice {
     /// The name of the slice. Not guaranteed to be unique.

@@ -1,13 +1,13 @@
 use asefile::{AsepriteFile, Tag};
 use bevy::{
     prelude::*,
-    reflect::TypeUuid,
+    reflect::{TypePath, TypeUuid},
     render::render_resource::{Extent3d, TextureDimension, TextureFormat},
     sprite::TextureAtlas,
 };
 
 /// A sprite-based animation.
-#[derive(Debug, TypeUuid)]
+#[derive(Debug, TypeUuid, TypePath)]
 #[uuid = "49c1ff21-7abe-4167-b25b-f3730763e348"]
 pub struct Animation {
     frames: Vec<Frame>,
